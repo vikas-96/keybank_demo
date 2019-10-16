@@ -1,0 +1,60 @@
+@extends('admin.layouts.auth')
+
+@section('title', 'Add Asset')
+
+@section('content')
+
+<div class="container">
+    <div class="row">
+        <form method="POST" id="step7-form" action="{{ route('step7-post',$asset_id)}}">
+            @csrf
+            <div class="col-12">
+
+                @if(in_array($template_id,config('template.sections.kap_data')))
+                @include('admin.assets.step7.kapdata')
+                @endif
+
+                <div class="row">
+                    <div class="col-24">
+                        <div class="card">
+                            <form method="POST" id="step7-form" action="{{ route('step7-post',$asset_id)}}">
+                                @csrf
+                                <div class="card-header">
+                                    <strong>KAP Data</strong>
+                                </div>
+                                <div class="card-body card-block">
+                                    <div class="row">
+                                        @if(in_array($template_id,config('template.sections.kap_data')))
+                                        @include('admin.assets.step7.kapdata')
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class=" card-footer">
+                                    <a href="{{ route('step6',[$asset_id]) }}" class="btn btn-secondary btn-sm"
+                                        role="button">Back</a>
+                                    <button type="submit" class="btn btn-primary btn-sm">Save & Next</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+                @endsection
+                @push('js')
+
+                <script>
+                    $(document).ready(function(){
+        $("#marketability").select2({
+            placeholder: 'Select an option',
+            dropdownAutoWidth : true,
+            width: '100%',
+        });
+
+        $("input.numbers").keypress(function(event) {
+          return /\d/.test(String.fromCharCode(event.keyCode));
+        })
+    });
+                </script>
+
+                @endpush

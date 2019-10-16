@@ -1,0 +1,10 @@
+@import "mixins/font";
+
+//Roboto Font family
+@include font-face(roboto-regular, '../fonts/Roboto-Regular', 300, normal);
+@include font-face(roboto-light, '../fonts/Roboto-Light', 300, normal);
+@include font-face(roboto-medium, '../fonts/Roboto-Medium', 300, normal);
+@include font-face(roboto-bold, '../fonts/Roboto-Bold', 300, normal);
+
+//icomoon
+@include font-face(icomoon, '../fonts/icomoon/icomoon', normal, normal);

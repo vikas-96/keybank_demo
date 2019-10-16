@@ -1,0 +1,44 @@
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+           url('#{$file-path}.woff2') format('woff2'),
+           url('#{$file-path}.woff') format('woff'),
+           url('#{$file-path}.ttf') format('truetype'),
+           url('#{$file-path}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+//Roboto Font family
+@mixin roboto-light-regular {
+  font-family: 'roboto-regular';
+  font-weight: 300;
+  font-style: normal;
+}
+@mixin roboto-light-light {
+  font-family: 'roboto-light';
+  font-weight: 300;
+  font-style: normal;
+}
+@mixin roboto-light-medium {
+  font-family: 'roboto-medium';
+  font-weight: 300;
+  font-style: normal;
+}
+@mixin roboto-light-bold {
+  font-family: 'roboto-bold';
+  font-weight: 300;
+  font-style: normal;
+}
+
+//icomoon
+@mixin icomoon {
+  font-family: 'icomoon';
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

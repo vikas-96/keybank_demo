@@ -1,0 +1,285 @@
+@extends('frontend.layouts.auth')
+
+@push('css')
+<link rel="stylesheet" href="{{URL::asset('frontend/css/jslider.css')}}" type="text/css">
+@endpush
+
+@section('content')
+
+@if(!empty($data) && !empty($data->items()))
+<ul class="property-listing">
+	<?php
+	$assets = $data->items();
+	$i = 0;
+	?>
+	@foreach($assets as $key=>$value)
+	@php
+	$i++;
+	@endphp
+	<li>
+		<div class="left-wrapper">
+			<div class="img-wrapper">
+				<a href="{{ route('asset-detail',[$value['customer']['_id']]) }}"> <img class="property-image"
+					src="{{ isset($value['feature_image']['feature_image'])?$value['feature_image']['feature_image'] : URL::asset('frontend/images/no-image.png') }}"></a>
+			</div>
+			<div class="auction-data">
+				<h5>Upcoming Auction:</h5>
+				<ul>
+					<li><span>E-Auction Date
+							:</span>{{ $value['upcoming_auction']['e_auction_date'] ??'--' }}</li>
+
+					<li><span>Reserve Price :</span>
+						@if(isset($value['upcoming_auction']['reserve_price']))
+						<i> {{$value['upcoming_auction']['reserve_price']}}</i>
+						@else
+						--
+						@endif
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="property-data">
+			<div class="property-details">
+				<a href="{{ route('asset-detail',[$value['customer']['_id']]) }}">
+					<h4>{{ $value['customer']['property_id'] }}</h4>
+
+					<p>{{ ucfirst($value['customer']['property_category']) }} -
+						{{ ucfirst($value['customer']['property_type']) }}
+						@if(isset($value['customer']['property_sub_type']))
+						-
+						<strong>{{ config('assets.' . $value['customer']['property_type'] . '.' . $value['customer']['property_sub_type']) }}</strong>
+						@endif
+					</p>
+					<p class="margin-bottom"><strong>{{ $value['address']['property_address'] }}</strong></p>
+
+					<div class="property-highlights row">
+						{{--  Configuration section Start --}}
+						@if(in_array($template_id,config('template.sections.configuration')))
+						@include('frontend.assets.listing.configuration-list')
+						@endif
+						{{--  Configuration section  Ends --}}
+
+
+						{{--  Size section start  --}}
+						@if(in_array($template_id,config('template.sections.size')))
+						@include('frontend.assets.listing.size-list')
+						@endif
+						{{--  Size section ends  --}}
+
+						{{--  Unit section start  --}}
+						@if(in_array($template_id,config('template.sections.unit')))
+						@include('frontend.assets.listing.unit-list')
+						@endif
+						{{--  Unit section ends  --}}
+
+					</div>
+
+					{{--  Building section start  --}}
+					@if(in_array($template_id,config('template.sections.building')))
+					<div class="property-highlights no-border row">
+						@include('frontend.assets.listing.building-list')
+					</div>
+					@endif
+					{{--  Building section ends  --}}
+
+
+					{{--  Neighbourhood section start  --}}
+					@if(in_array($template_id,config('template.sections.neighbourhood')))
+					<div class="property-highlights no-border row">
+						@include('frontend.assets.listing.neighbourhood-list')
+					</div>
+					@endif
+					{{--  Neighbourhood section ends  --}}
+
+					<div class="property-highlights no-border row">
+						{{--  Plot section start  --}}
+						@if(in_array($template_id,config('template.sections.plot')))
+						@include('frontend.assets.listing.plot-list')
+						@endif
+						{{--  Plot section ends  --}}
+
+						{{--  Office Summary section start  --}}
+						@if(in_array($template_id,config('template.sections.office_summary')))
+						@include('frontend.assets.listing.office-summary-list')
+						@endif
+						{{--  Office Summary section ends  --}}
+
+						{{--  OC section start  --}}
+						@if(in_array($template_id,config('template.sections.oc')))
+						@include('frontend.assets.listing.oc-list')
+						@endif
+						{{--  OC section ends  --}}
+
+						{{--  Stock section start  --}}
+						@if(in_array($template_id,config('template.sections.stock_other')))
+						@include('frontend.assets.listing.stock-list')
+						@endif
+						{{--  Stock section ends  --}}
+
+						{{--  Stock section start  --}}
+						@if(in_array($template_id,config('template.sections.vehicle')))
+						@include('frontend.assets.listing.vehicle-list')
+						@endif
+						{{--  Stock section ends  --}}
+
+						{{--  Customer section Start --}}
+						@include('frontend.assets.listing.customer-list')
+						{{--  Customer  section  Ends --}}
+					</div>
+					<div class="property-highlights no-border row">
+
+						{{--  loan section Start --}}
+						@if(in_array($template_id,config('template.sections.loan')))
+						@include('frontend.assets.listing.loan-list')
+						@endif
+						{{--  loan section  Ends --}}
+					</div>
+				</a>
+			</div>
+			<div class="property-costing">
+				<ul>
+					<li><span>Market Value:
+							<span class="tooltip-custom">
+								<i class="fa fa-info-circle" aria-hidden="true"></i>
+								<span class="tooltiptext">
+									Average of Market Values from the latest Valuation Report.
+								</span>
+							</span>
+						</span> {{ $value['valuation']['fair_market_value_avg'] ??'--' }}</li>
+					<li><span>Realizable Value:
+							<span class="tooltip-custom">
+								<i class="fa fa-info-circle" aria-hidden="true"></i>
+								<span class="tooltiptext">
+									Average of Realizable Values from the latest Valuation Report.
+								</span>
+							</span>
+						</span>
+						{{ $value['valuation']['realizable_value_avg'] ??'--' }}</li>
+					<li><span>Distress Value:
+							<span class="tooltip-custom">
+								<i class="fa fa-info-circle" aria-hidden="true"></i>
+								<span class="tooltiptext">
+									Average of Distress Values from the latest Valuation Report.
+								</span>
+							</span>
+						</span> {{ $value['valuation']['distress_value_avg'] ??'--' }}
+					</li>
+
+					<li><span>Reserve Price :</span>
+						@if(isset($value['upcoming_auction']['reserve_price']))
+							<i>
+								@if(is_numeric($value['upcoming_auction']['reserve_price']))
+	                            	{{money_format("%.0n", $value['upcoming_auction']['reserve_price']) }}
+	                            @else
+	                                {{ $value['upcoming_auction']['reserve_price'] }}
+	                            @endif
+							</i>
+						@else
+						--
+						@endif
+					</li>
+					@if(isset($value['kap_data']['marketability']))
+					<li class="marketability"><span>Marketability
+							<span class="tooltip-custom">
+								<i class="fa fa-info-circle" aria-hidden="true"></i>
+								<span class="tooltiptext">
+									<ul>
+										<li><i class="green"></i> Highest</li>
+										<li><i class="orange"></i> Medium</li>
+										<li><i class="red"></i> Low</li>
+									</ul>
+								</span>
+							</span>
+						</span>
+						<i class="{{ $value['kap_data']['marketability'] }}"></i>
+					</li>
+					@endif
+				</ul>
+				<div class="cost-compare-wrapper">
+					@if(isset($value['kap_data']['kap_price']) || isset($value['kap_data']['kap_price_upper']))
+					<div class="cost">
+						<h5>KAP PRICE</h5>
+						<span>&#x20b9;
+							@if(isset($value['kap_data']['kap_price']))
+							{{ price_format($value['kap_data']['kap_price']) ??'--' }}
+							@endif
+							@if(isset($value['kap_data']['kap_price']) && isset($value['kap_data']['kap_price_upper']))
+							-
+							@endif
+							@if(isset($value['kap_data']['kap_price_upper']))
+							{{ price_format($value['kap_data']['kap_price_upper']) ??'--' }}
+							@endif
+					</div>
+					@endif
+
+				</div>
+				@if(isset($value['kap_data']['other_insights']))
+				<div class="message">
+					@if(isset($value['kap_data']['other_insights']))
+					<p>{{ $value['kap_data']['other_insights'] ?? null }}</p>
+					@endif
+
+				</div>
+				@endif
+				@if(isset($value['kap_data']['google_rating']))
+				<p class="rating-list">Google Rating : {{ $value['kap_data']['google_rating'] ?? null }}</p>
+				@endif
+				@if(isset($value['kap_data']['no_of_reviews']))
+				<p class="rating-list">Number of Reviews : {{ $value['kap_data']['no_of_reviews'] ?? null }}</p>
+				@endif
+				<div class="compare-btn">
+					<span class="add-to-compare">
+						<input type="checkbox" id="add-to-compare_{{ $value['customer']['_id'] }}" name=""
+							class="compare-check" data-property="{{ $value['customer']['_id'] }}">
+						<label for="add-to-compare_{{ $value['customer']['_id'] }}">Add To Compare</label>
+					</span>
+				</div>
+			</div>
+
+		</div>
+
+	</li>
+	@endforeach
+
+
+</ul>
+
+{{ $data->links('frontend.layouts.paginator', ['paginator' => $data,'link_limit' => 3]) }}
+@else
+<div>No content Available</div>
+
+@endif
+@endsection
+
+@push('advance-filter')
+@if(isset($template_id))auction-data
+@include('frontend.layouts.partials.advance-filter')
+@endif
+@endpush
+
+@push('js')
+<script src="{{URL::asset('frontend/js/bootstrap-slider.js')}}"></script>
+
+<!--<script type="text/javascript" src="{{URL::asset('frontend/js/slider/jquery-1.7.1.js')}}"></script>-->
+<script type="text/javascript" src="{{URL::asset('frontend/js/slider/jshashtable-2.1_src.js')}}"></script>
+<script type="text/javascript" src="{{URL::asset('frontend/js/slider/jquery.numberformatter-1.2.3.js')}}"></script>
+<script type="text/javascript" src="{{URL::asset('frontend/js/slider/tmpl.js')}}"></script>
+<script type="text/javascript" src="{{URL::asset('frontend/js/slider/jquery.dependClass-0.1.js')}}"></script>
+<script type="text/javascript" src="{{URL::asset('frontend/js/slider/draggable-0.1.js')}}"></script>
+<script type="text/javascript" src="{{URL::asset('frontend/js/slider/jquery.slider.js')}}"></script>
+
+
+<script type="text/javascript" charset="utf-8">
+	jQuery("#Slider5").slider({
+	    from: 0,
+	    to: 80000,
+	    scale: [0, 150000, 250000, 350000, 500000, 80000],
+	    step: 1000
+	  });
+
+	  jQuery(document).ready(function(){
+
+	  });
+
+</script>
+@endpush

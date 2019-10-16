@@ -1,0 +1,51 @@
+version: "3"
+
+services:
+  php:
+    container_name: ${PROJECT_NAME}-php
+    build:
+      context: ./src/
+      dockerfile: ./Dockerfile
+    restart: always
+    env_file:
+      ./.env
+    environment:
+      APP_ENV: ${PROJECT_ENV}
+      DB_CONNECTION: ${DB_CONNECTION}
+      DB_HOST: ${DB_HOST}
+      DB_DATABASE: ${DB_DATABASE}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_PORT: ${DB_PORT}
+    volumes:
+      - ./src/vendor:/var/www/html/vendor
+      - ./src:/var/www/html
+    depends_on:
+      - mongodb
+    links:
+      - mongodb
+
+  nginx:
+    container_name: ${PROJECT_NAME}-nginx
+    image: nginx:1.14-alpine
+    restart: always
+    ports:
+      - "7080:80"
+    volumes:
+      - ./docker-config/ssl:/etc/ssl
+      - ./docker-config/nginx/laravel.conf:/etc/nginx/conf.d/ksd.conf
+      - ./src:/var/www/html
+    depends_on:
+      - php
+    links:
+      - php
+
+  mongodb:
+    container_name: ${PROJECT_NAME}-mongo
+    image: mongo:4.0.12
+    restart: always
+    ports:
+      - "7017:27017"
+    volumes:
+      - ./data/mongo:/data/db
+      - ./data-init/mongo:/data-init

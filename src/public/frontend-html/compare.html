@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  	<title>Listing</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="css/common.css" rel="stylesheet">
+</head>
+<body>
+
+<header id="left-panel" class="left-panel">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 main-logo"><a href="/"><img src="http://www.aid.local:9080/admin/images/login-page-logo.png"></a></div>
+            <div class="col-lg-8 search-box">
+            	<div class="input-group">        
+	                <input type="text" class="form-control" name="x" placeholder="Search">
+	                <span class="input-group-btn">
+	                    <button class="btn btn-default" type="button">
+	                    	<i class="fa fa-search" aria-hidden="true"></i>
+	                    </button>
+	                </span>
+	            </div>
+            </div>
+            <div class="col-lg-13">
+                <nav class="navbar navbar-expand-sm navbar-default pull-right">
+				  <div class="collapse navbar-collapse">
+				    <ul class="navbar-nav">
+				      <li class="nav-item dmenu"><a class="nav-link" href="#">Advanced Search</a></li>
+				      <li class="nav-item dmenu"><a class="nav-link" href="#">Dashboard</a></li>
+				    </ul>
+				    <div class="user-area dropdown float-right">
+				      <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				        <i class="fa fa-user-circle" style="font-size: 2em;"></i>
+				      </a>
+				      <div class="user-menu dropdown-menu">
+				            <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
+				            <a class="nav-link" href="http://www.aid.local:9080/logout"><i class="fa fa-power-off"></i> Logout</a>
+				      </div>
+				    </div>
+				  </div>
+				</nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="container">
+	<div class="row">
+		<div class="col-md-24">
+			<nav aria-label="breadcrumb">
+			  <ol class="breadcrumb">
+			    <li class="breadcrumb-item"><a href="#">Home</a></li>
+			    <li class="breadcrumb-item"><a href="#">Property</a></li>
+			    <li class="breadcrumb-item active" aria-current="page">Compare</li>
+			  </ol>
+			</nav>
+			<div class="compare_wrapper">
+				<h3>Compare Projects</h3>
+				<div class="row m-0 justify-content-end">
+					<div class="col-lg-6 p-0">
+						<div class="card">
+							<button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+							<h5>SBINIRFABHH</h5>
+							<span>Andheri West, Mumbai</span>
+							<p class="red">4.0 Cr - 5.50 Cr</p>
+							<p>4 BHK</p>
+						</div>
+					</div>
+					<div class="col-lg-6 p-0">
+						<div class="card">
+							<button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+							<h5>SBINIRFABHH</h5>
+							<span>Andheri West, Mumbai</span>
+							<p class="red">4.0 Cr - 5.50 Cr</p>
+							<p>4 BHK</p>
+						</div>
+					</div>
+					<div class="col-lg-6 add-property">
+						<button class="btn ">Add Properties</button>
+					</div>
+				</div>
+				<div class="project-detail-accordian">
+                    <div class="accordion" id="accordionExample">
+                    	<div class="card" id="overview">
+                                <div class="card-header" id="headingOne">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Primary Data
+                                    </button>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-6 pr-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail">
+                                                        <li>
+                                                            Property Category 
+                                                        </li>
+                                                        <li>
+                                                            Property Sub Type
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0 ">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li>
+                                                            <span>Immovable</span></li>
+                                                        <li>
+                                                            <span>House / Villa</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li>
+                                                            <span>Immovable</span></li>
+                                                        <li>
+                                                            <span>House / Villa</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card" id="overview">
+                                <div class="card-header" id="headingOne">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsetwo" aria-expanded="true" aria-controls="collapseOne">
+                                    Account Information
+                                    </button>
+                                </div>
+                                <div id="collapsetwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-6 pr-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail">
+                                                        <li>
+                                                            Name of borrower
+                                                        </li>
+                                                        <li>
+                                                            Recovery Branch
+                                                        </li>
+                                                        <li>
+                                                            Recall Date
+                                                        </li>
+                                                        <li>
+                                                            Case Lead Officer Name
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0 ">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>Milan Group</span></li>
+                                                        <li><span>SARB Mumbai</span></li>
+                                                        <li><span>26/5/2018</span></li>
+                                                        <li><span>Mr. S S Borde</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>Milan Group</span></li>
+                                                        <li><span>SARB Mumbai</span></li>
+                                                        <li><span>26/5/2018</span></li>
+                                                        <li><span>Mr. S S Borde</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card" id="overview">
+                                <div class="card-header" id="headingOne">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsethree" aria-expanded="true" aria-controls="collapseOne">
+                                    Loan
+                                    </button>
+                                </div>
+                                <div id="collapsethree" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-6 pr-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail">
+                                                        <li>
+                                                            NPA Date
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0 ">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>15/6/2014</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>15/6/2014</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card" id="overview">
+                                <div class="card-header" id="headingOne">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapseOne">
+                                    Address
+                                    </button>
+                                </div>
+                                <div id="collapsefour" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-6 pr-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail">
+                                                        <li>
+                                                            Property Address
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0 ">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>25, JP Rd, opp. Dariya Mahal, Aram Nagar, Aram Nagar, Versova, Andheri West, Mumbai, Maharashtra 400061</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>25, JP Rd, opp. Dariya Mahal, Aram Nagar, Aram Nagar, Versova, Andheri West, Mumbai, Maharashtra 400061</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card" id="overview">
+                                <div class="card-header" id="headingOne">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="true" aria-controls="collapseOne">
+                                    Size / Area
+                                    </button>
+                                </div>
+                                <div id="collapsefive" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-6 pr-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail">
+                                                        <li>Area & Unit</li>
+                                                        <li>Mezzaine / Loft Area</li>
+                                                        <li>Total Terrace / Balcony</li>
+                                                        <li>Basement Construction</li>
+                                                        <li>Basement Area</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0 ">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>2,500 Sq. ft. <small>(Builtup)</small> - 2,319 Sq. ft. <small>(Carpet)</small></span></li>
+                                                        <li><span><small>N/A</small></span></li>
+                                                        <li><span>2 - 4</span></li>
+                                                        <li><span><small>N/A</small></span></li>
+                                                        <li><span><small>N/A</small></span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>2,500 Sq. ft. <small>(Builtup)</small> - 2,319 Sq. ft. <small>(Carpet)</small></span></li>
+                                                        <li><span><small>N/A</small></span></li>
+                                                        <li><span>2 - 4</span></li>
+                                                        <li><span><small>N/A</small></span></li>
+                                                        <li><span><small>N/A</small></span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card" id="overview">
+                                <div class="card-header" id="headingOne">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="true" aria-controls="collapseOne">
+                                    Configuration
+                                    </button>
+                                </div>
+                                <div id="collapsesix" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-6 pr-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail">
+                                                        <li>Number of Baths / Toilets</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0 ">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>3 <small>(Baths)</small> - 4 <small>(Toilets)</small></span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>3 <small>(Baths)</small> - 4 <small>(Toilets)</small></span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="card" id="overview">
+                                <div class="card-header" id="headingOne">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseseven" aria-expanded="true" aria-controls="collapseOne">
+                                    Unit Details
+                                    </button>
+                                </div>
+                                <div id="collapseseven" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-6 pr-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail">
+                                                        <li>Furnishing Status</li>
+                                                        <li>Furnishing Details</li>
+                                                        <li>Flooring Type</li>
+                                                        <li>Flat USP</li>
+                                                        <li>Painting Status</li>
+                                                        <li>Number of Floors</li>
+                                                        <li>Lifts in the Building</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0 ">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>FF</span></li>
+                                                        <li><span><small>N/A</small></span></li>
+                                                        <li><span>Granite</span></li>
+                                                        <li><span>Smart Security</span></li>
+                                                        <li><span>Good</span></li>
+                                                        <li><span><small>N/A</small></span></li>
+                                                        <li><span><small>N/A</small></span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>FF</span></li>
+                                                        <li><span><small>N/A</small></span></li>
+                                                        <li><span>Granite</span></li>
+                                                        <li><span>Smart Security</span></li>
+                                                        <li><span>Good</span></li>
+                                                        <li><span><small>N/A</small></span></li>
+                                                        <li><span><small>N/A</small></span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="card" id="overview">
+                                <div class="card-header" id="headingOne">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseeight" aria-expanded="true" aria-controls="collapseOne">
+                                    Plot/ Building Information
+                                    </button>
+                                </div>
+                                <div id="collapseeight" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-6 pr-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail">
+                                                        <li>Building Amenities</li>
+                                                        <li>Year of Completion</li>
+                                                        <li>Residual Life of Building</li>
+                                                        <li>Building Condition</li>
+                                                        <li>Number of Parking</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0 ">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>Pool, Wifi, Garden, Generator, Security, Play Area</span></li>
+                                                        <li><span>2016</span></li>
+                                                        <li><span>5 Years</span></li>
+                                                        <li><span>Well Maintained</span></li>
+                                                        <li><span>2 <small>(Covered parking)</small></span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>Pool, Wifi, Garden, Generator, Security, Play Area</span></li>
+                                                        <li><span>2016</span></li>
+                                                        <li><span>5 Years</span></li>
+                                                        <li><span>Well Maintained</span></li>
+                                                        <li><span>2 <small>(Covered parking)</small></span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="card" id="overview">
+                                <div class="card-header" id="headingOne">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsenine" aria-expanded="true" aria-controls="collapseOne">
+                                    Neighbourhood Information
+                                    </button>
+                                </div>
+                                <div id="collapsenine" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-6 pr-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail">
+                                                        <li>Classification of Locality</li>
+                                                        <li>Metro Station (within 500m)</li>
+                                                        <li>Railway Station (within 500m)</li>
+                                                        <li>Number of Schools</li>
+                                                        <li>Number of Shopping Malls</li>
+                                                        <li>Number of Hospitals</li>
+                                                        <li>Number of ATM's</li>
+                                                        <li>Number of Restaurants</li>
+                                                        <li>Number of Parks</li>
+                                                        <li>Distance from Airport</li>
+                                                        <li>Number of Petrol Pumps</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0 ">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>High Class</span></li>
+                                                        <li><span>Yes</span></li>
+                                                        <li><span>Yes</span></li>
+                                                        <li><span>2 <small>(Within 3km)</small></span></li>
+                                                        <li><span>3 <small>(Within 2km)</small></span></li>
+                                                        <li><span>5 <small>(Within 3km)</small></span></li>
+                                                        <li><span>6 <small>(Within 200m)</small></span></li>
+                                                        <li><span>8 <small>(Within 1km)</small></span></li>
+                                                        <li><span>2 <small>(Within 500m)</small></span></li>
+                                                        <li><span>3 kms</span></li>
+                                                        <li><span>2 <small>(Within 1km)</small></span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>High Class</span></li>
+                                                        <li><span>Yes</span></li>
+                                                        <li><span>Yes</span></li>
+                                                        <li><span>2 <small>(Within 3km)</small></span></li>
+                                                        <li><span>3 <small>(Within 2km)</small></span></li>
+                                                        <li><span>5 <small>(Within 3km)</small></span></li>
+                                                        <li><span>6 <small>(Within 200m)</small></span></li>
+                                                        <li><span>8 <small>(Within 1km)</small></span></li>
+                                                        <li><span>2 <small>(Within 500m)</small></span></li>
+                                                        <li><span>3 kms</span></li>
+                                                        <li><span>2 <small>(Within 1km)</small></span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="card" id="overview">
+                                <div class="card-header" id="headingOne">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseten" aria-expanded="true" aria-controls="collapseOne">
+                                    Asset Information
+                                    </button>
+                                </div>
+                                <div id="collapseten" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-6 pr-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail">
+                                                        <li>Fair Market Value (in Rs.)</li>
+                                                        <li>Realizable Value</li>
+                                                        <li>Forced Sale Value</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0 ">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>90,00,000</span></li>
+                                                        <li><span>88,00,000</span></li>
+                                                        <li><span>85,00,000</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>90,00,000</span></li>
+                                                        <li><span>88,00,000</span></li>
+                                                        <li><span>85,00,000</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="card" id="overview">
+                                <div class="card-header" id="headingOne">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseeleven" aria-expanded="true" aria-controls="collapseOne">
+                                    KAP Data
+                                    </button>
+                                </div>
+                                <div id="collapseeleven" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-6 pr-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail">
+                                                        <li>Marketability</li>
+                                                        <li>Recommended Price</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0 ">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>Marketable</span></li>
+                                                        <li><span>5.0cr</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 px-0">
+                                                <div class="card-detail">
+                                                    <ul class="property-detail bl">
+                                                        <li><span>Marketable</span></li>
+                                                        <li><span>5.0cr</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

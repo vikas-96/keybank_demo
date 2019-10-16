@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  	<title>Listing</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="css/common.css" rel="stylesheet">
+</head>
+<body>
+
+<header id="left-panel" class="left-panel">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 main-logo"><a href="/"><img src="http://www.aid.local:9080/admin/images/login-page-logo.png"></a></div>
+            <div class="col-lg-8 search-box">
+            	<div class="input-group">        
+	                <input type="text" class="form-control" name="x" placeholder="Search">
+	                <span class="input-group-btn">
+	                    <button class="btn btn-default" type="button">
+	                    	<i class="fa fa-search" aria-hidden="true"></i>
+	                    </button>
+	                </span>
+	            </div>
+            </div>
+            <div class="col-lg-13">
+                <nav class="navbar navbar-expand-sm navbar-default pull-right">
+				  <div class="collapse navbar-collapse">
+				    <ul class="navbar-nav">
+				      <li class="nav-item dmenu"><a class="nav-link" href="#">Advanced Search</a></li>
+				      <li class="nav-item dmenu"><a class="nav-link" href="#">Dashboard</a></li>
+				    </ul>
+				    <div class="user-area dropdown float-right">
+				      <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				        <i class="fa fa-user-circle" style="font-size: 2em;"></i>
+				      </a>
+				      <div class="user-menu dropdown-menu">
+				            <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
+				            <a class="nav-link" href="http://www.aid.local:9080/logout"><i class="fa fa-power-off"></i> Logout</a>
+				      </div>
+				    </div>
+				  </div>
+				</nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="nav-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-24">
+            	<ul class="search-form-header">
+            		<li>
+            			<select class="form-control">
+            				<option>Category</option>
+            			</select>
+            		</li>
+            		<li>
+            			<select class="form-control">
+            				<option>Property Type</option>
+            			</select>
+            		</li>
+            		<li>
+            			<select class="form-control">
+            				<option>Property Sub Type</option>
+            			</select>
+            		</li>
+            		<li>
+            			<button type="button" class="btn btn-primary">Search</button>
+            		</li>
+            		<li>
+            			<button type="button" class="btn btn-secondary"><i class="fa fa-sliders" aria-hidden="true"></i> Advance Filter</button>
+            		</li>
+            	</ul>
+
+            	<ul class="sort-view-wrapper">
+            		<li>
+            			<label>Sort</label>
+            			<select class="form-control">
+            				<option>Price</option>
+            			</select>
+            		</li>
+            		<li>
+            			<label>View</label>
+            			<div class="btn-group">
+		                    <button class="active">List</button>
+		                    <button>Table</button>
+		                </div>
+            		</li>
+            	</ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="container">
+	<div class="row">
+		<div class="col-lg-24">
+			<ul class="property-listing">
+				<li>
+					<img class="property-image" src="images/property-image.png">
+					<div class="property-data">
+						<div class="property-details">
+							<a href="#">
+							<h4>SBINIRFAAAAA</h4>
+							<p>Immovable - Residential R - <strong>Residential Building</strong></p>
+							<p class="margin-bottom"><strong>Survey number 22/3B Barvi dam, Murbad Rd, Sonivali, Badlapur West, Maharashtra 421503</strong></p>
+
+							<div class="property-highlights row">
+								<div class="col-md-6">
+									<span>Configuration :</span>
+									<strong>2 BHK Apartment</strong>
+								</div>
+								<div class="col-md-6">
+									<span>Carpet Area :</span>
+									<strong>2200 sq. ft.</strong>
+								</div>
+								<div class="col-md-6">
+									<span>Super Built up Area :</span>
+									<strong>2500 sq. ft.</strong>
+								</div>
+
+								<div class="col-md-12">
+									<span>Building Amenities :</span>
+									<strong>Parking | Gym | Swimming</strong>
+								</div>
+								<div class="col-md-6">
+									<span>Furnishing Status :</span>
+									<strong>Semi furnished</strong>
+								</div>
+							</div>
+							<div class="property-highlights row">
+								<div class="col-md-5">
+									<span>Borrower Name</span>
+									<strong>ANSH STUDIO</strong>
+								</div>
+								<div class="col-md-4">
+									<span>Recovery Branch</span>
+									<strong>SARB Mumbai</strong>
+								</div>
+								<div class="col-md-4">
+									<span>NPA Date</span>
+									<strong>6 Aug 2019</strong>
+								</div>
+								<div class="col-md-4">
+									<span>Past Auctions</span>
+									<strong>12</strong>
+								</div>
+							</div>
+							</a>
+						</div>
+						<div class="property-costing">
+							<ul>
+								<li><span>Market Value:
+									<span class="tooltip-custom">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>
+										<span class="tooltiptext">
+											Average of Market Values from the latest Valuation Report.
+										</span>
+									</span>
+								</span> &#x20b9; 5,700,00</li>
+								<li><span>Realizable Value:</span> &#x20b9; 5,200,00</li>
+								<li><span>Distress Value:</span> &#x20b9; 5,000,00</li>
+								<h5>Upcoming Auction:</h5>
+								<li><span>E-Auction Date :</span> 21/06/2019</li>
+								<li><span>Reserve Price :</span> <i>&#x20b9; 57 Lakh</i></li>
+								<li><span>Marketability 
+									<span class="tooltip-custom">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>
+										<span class="tooltiptext">
+											<ul>
+												<li><i class="green"></i> Highest</li>
+												<li><i class="orange"></i> Medium</li>
+												<li><i class="red"></i> Low</li>
+											</ul>
+										</span>
+									</span>
+								</span> <i class="green"></i></li>
+							</ul>
+							<div class="cost-compare-wrapper">
+								<div class="cost">
+									<h5>CAP PRICE</h5>
+									<span>&#x20b9; 1.3 Cr</span>
+								</div>
+								<span class="add-to-compare">
+									<input type="checkbox" id="add-to-compare" name="">
+									<label for="add-to-compare">Add To Compare</label>
+								</span>
+							</div>
+						</div>
+					</div>
+				</li>
+
+
+				<li>
+					<img class="property-image" src="images/property-image.png">
+					<div class="property-data">
+						<div class="property-details">
+							<a href="#">
+							<h4>SBINIRFAAAAA</h4>
+							<p>Immovable - Residential R - <strong>Residential Building</strong></p>
+							<p class="margin-bottom"><strong>Survey number 22/3B Barvi dam, Murbad Rd, Sonivali, Badlapur West, Maharashtra 421503</strong></p>
+
+							<div class="property-highlights row">
+								<div class="col-md-6">
+									<span>Configuration :</span>
+									<strong>2 BHK Apartment</strong>
+								</div>
+								<div class="col-md-6">
+									<span>Carpet Area :</span>
+									<strong>2200 sq. ft.</strong>
+								</div>
+								<div class="col-md-6">
+									<span>Super Built up Area :</span>
+									<strong>2500 sq. ft.</strong>
+								</div>
+
+								<div class="col-md-12">
+									<span>Building Amenities :</span>
+									<strong>Parking | Gym | Swimming</strong>
+								</div>
+								<div class="col-md-6">
+									<span>Furnishing Status :</span>
+									<strong>Semi furnished</strong>
+								</div>
+
+								<div class="col-md-5">
+									<span>Borrower Name</span>
+									<strong>ANSH STUDIO</strong>
+								</div>
+								<div class="col-md-4">
+									<span>Recovery Branch</span>
+									<strong>SARB Mumbai</strong>
+								</div>
+								<div class="col-md-4">
+									<span>NPA Date</span>
+									<strong>6 Aug 2019</strong>
+								</div>
+								<div class="col-md-4">
+									<span>Past Auctions</span>
+									<strong>12</strong>
+								</div>
+							</div>
+							</a>
+						</div>
+						<div class="property-costing">
+							<ul>
+								<li><span>Market Value:
+									<span class="tooltip-custom">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>
+										<span class="tooltiptext">
+											Average of Market Values from the latest Valuation Report.
+										</span>
+									</span>
+								</span> &#x20b9; 5,700,00</li>
+								<li><span>Realizable Value:</span> &#x20b9; 5,200,00</li>
+								<li><span>Distress Value:</span> &#x20b9; 5,000,00</li>
+								<h5>Upcoming Auction:</h5>
+								<li><span>E-Auction Date :</span> 21/06/2019</li>
+								<li><span>Reserve Price :</span> <i>&#x20b9; 57 Lakh</i></li>
+								<li><span>Marketability 
+									<span class="tooltip-custom">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>
+										<span class="tooltiptext">
+											<ul>
+												<li><i class="green"></i> Highest</li>
+												<li><i class="orange"></i> Medium</li>
+												<li><i class="red"></i> Low</li>
+											</ul>
+										</span>
+									</span>
+								</span> <i class="green"></i></li>
+							</ul>
+							<div class="cost-compare-wrapper">
+								<div class="cost">
+									<h5>CAP PRICE</h5>
+									<span>&#x20b9; 1.3 Cr</span>
+								</div>
+								<span class="add-to-compare">
+									<input type="checkbox" id="add-to-compare" name="">
+									<label for="add-to-compare">Add To Compare</label>
+								</span>
+							</div>
+						</div>
+					</div>
+				</li>
+
+
+
+				<li>
+					<img class="property-image" src="images/property-image.png">
+					<div class="property-data">
+						<div class="property-details">
+							<a href="#">
+							<h4>SBINIRFAAAAA</h4>
+							<p>Immovable - Residential R - <strong>Residential Building</strong></p>
+							<p class="margin-bottom"><strong>Survey number 22/3B Barvi dam, Murbad Rd, Sonivali, Badlapur West, Maharashtra 421503</strong></p>
+
+							<div class="property-highlights row">
+								<div class="col-md-6">
+									<span>Configuration :</span>
+									<strong>2 BHK Apartment</strong>
+								</div>
+								<div class="col-md-6">
+									<span>Carpet Area :</span>
+									<strong>2200 sq. ft.</strong>
+								</div>
+								<div class="col-md-6">
+									<span>Super Built up Area :</span>
+									<strong>2500 sq. ft.</strong>
+								</div>
+
+								<div class="col-md-12">
+									<span>Building Amenities :</span>
+									<strong>Parking | Gym | Swimming</strong>
+								</div>
+								<div class="col-md-6">
+									<span>Furnishing Status :</span>
+									<strong>Semi furnished</strong>
+								</div>
+
+								<div class="col-md-5">
+									<span>Borrower Name</span>
+									<strong>ANSH STUDIO</strong>
+								</div>
+								<div class="col-md-4">
+									<span>Recovery Branch</span>
+									<strong>SARB Mumbai</strong>
+								</div>
+								<div class="col-md-4">
+									<span>NPA Date</span>
+									<strong>6 Aug 2019</strong>
+								</div>
+								<div class="col-md-4">
+									<span>Past Auctions</span>
+									<strong>12</strong>
+								</div>
+							</div>
+							</a>
+						</div>
+						<div class="property-costing">
+							<ul>
+								<li><span>Market Value:
+									<span class="tooltip-custom">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>
+										<span class="tooltiptext">
+											Average of Market Values from the latest Valuation Report.
+										</span>
+									</span>
+								</span> &#x20b9; 5,700,00</li>
+								<li><span>Realizable Value:</span> &#x20b9; 5,200,00</li>
+								<li><span>Distress Value:</span> &#x20b9; 5,000,00</li>
+								<h5>Upcoming Auction:</h5>
+								<li><span>E-Auction Date :</span> 21/06/2019</li>
+								<li><span>Reserve Price :</span> <i>&#x20b9; 57 Lakh</i></li>
+								<li><span>Marketability 
+									<span class="tooltip-custom">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>
+										<span class="tooltiptext">
+											<ul>
+												<li><i class="green"></i> Highest</li>
+												<li><i class="orange"></i> Medium</li>
+												<li><i class="red"></i> Low</li>
+											</ul>
+										</span>
+									</span>
+								</span> <i class="green"></i></li>
+							</ul>
+							<div class="cost-compare-wrapper">
+								<div class="cost">
+									<h5>CAP PRICE</h5>
+									<span>&#x20b9; 1.3 Cr</span>
+								</div>
+								<span class="add-to-compare">
+									<input type="checkbox" id="add-to-compare" name="">
+									<label for="add-to-compare">Add To Compare</label>
+								</span>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<nav class="pull-right">
+			  <ul class="pagination">
+			    <li class="page-item disabled">
+			      <a class="page-link" href="#" tabindex="-1">Previous</a>
+			    </li>
+			    <li class="page-item"><a class="page-link" href="#">1</a></li>
+			    <li class="page-item active">
+			      <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+			    </li>
+			    <li class="page-item"><a class="page-link" href="#">3</a></li>
+			    <li class="page-item">
+			      <a class="page-link" href="#">Next</a>
+			    </li>
+			  </ul>
+			</nav>
+		</div>
+	</div>
+</section>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+  	<title>Listing</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/jslider.css" type="text/css">
+	<link href="css/common.css" rel="stylesheet">
+</head>
+<body>
+
+<header id="left-panel" class="left-panel">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 main-logo"><a href="/"><img src="http://www.aid.local:9080/admin/images/login-page-logo.png"></a></div>
+            <div class="col-lg-8 search-box">
+            	<div class="input-group">        
+	                <input type="text" class="form-control" name="x" placeholder="Search">
+	                <span class="input-group-btn">
+	                    <button class="btn btn-default" type="button">
+	                    	<i class="fa fa-search" aria-hidden="true"></i>
+	                    </button>
+	                </span>
+	            </div>
+            </div>
+            <div class="col-lg-13">
+                <nav class="navbar navbar-expand-sm navbar-default pull-right">
+				  <div class="collapse navbar-collapse">
+				    <ul class="navbar-nav">
+				      <li class="nav-item dmenu"><a class="nav-link" href="#">Advanced Search</a></li>
+				      <li class="nav-item dmenu"><a class="nav-link" href="#">Dashboard</a></li>
+				    </ul>
+				    <div class="user-area dropdown float-right">
+				      <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				        <i class="fa fa-user-circle" style="font-size: 2em;"></i>
+				      </a>
+				      <div class="user-menu dropdown-menu">
+				            <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
+				            <a class="nav-link" href="http://www.aid.local:9080/logout"><i class="fa fa-power-off"></i> Logout</a>
+				      </div>
+				    </div>
+				  </div>
+				</nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="nav-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-24">
+            	<ul class="search-form-header">
+            		<li>
+            			<select class="form-control">
+            				<option>Category</option>
+            			</select>
+            		</li>
+            		<li>
+            			<select class="form-control">
+            				<option>Property Type</option>
+            			</select>
+            		</li>
+            		<li>
+            			<select class="form-control">
+            				<option>Property Sub Type</option>
+            			</select>
+            		</li>
+            		<li>
+            			<button type="button" class="btn btn-primary">Search</button>
+            		</li>
+            		<li>
+            			<a data-toggle="modal" href="#advancefilter" class="btn btn-secondary"><i class="fa fa-sliders" aria-hidden="true"></i> Advance Filter</a>
+            		</li>
+            	</ul>
+
+            	<ul class="sort-view-wrapper">
+            		<li>
+            			<label>Sort</label>
+            			<select class="form-control">
+            				<option>Price</option>
+            			</select>
+            		</li>
+            		<li>
+            			<label>View</label>
+            			<div class="btn-group">
+		                    <button class="">List</button>
+		                    <button class="active">Table</button>
+		                </div>
+            		</li>
+            	</ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="container">
+	<div class="row">
+		<div class="col-lg-24">
+			<div class="table-outer">
+			  <div class="table-inner">
+			    <table>
+			        <thead>
+			        	<tr>
+				          <th class="hard_left">Property ID</th>
+				          <th class="next_center">Property Subtype</th>
+				          <th class="next_left">Name of borrower</th>
+				          <th>Referred to NCLT</th>
+				          <th>Recovery Branch</th>
+				          <th>NPA Date</th>
+				          <th>Address of Property</th>
+				          <th>Area</th>
+				          <th>Configuration</th>
+				          <th>Furnishing Status</th>
+				          <th>Flat USP</th>
+				          <th>Building Amenities</th>
+				          <th>Fair Market Values</th>
+				          <th>Realizable Value</th>
+				          <th>Forced Sale Value</th>
+				          <th>Auction Date and Time</th>
+				          <th>Reserve Price</th>
+				          <th>No. of Auctions held</th>
+				          <th>Possession Type</th>
+				          <th>Marketability</th>
+				          <th>KAP Price</th>
+				        </tr>
+			        </thead>
+			        <tbody>
+			        	<tr>
+				          <td class="hard_left">SBINIRFAAAAA</td>
+				          <td class="next_center">Flat</td>
+				          <td class="next_left">ANSH STUDIO</td>
+				          <td>No</td>
+				          <td>SARB MUMBAI</td>
+				          <td>01/07/2011</td>
+				          <td>FLAT NO.209, 2ND FLOOR, RAJ RESIDENCY II CHS LTD. C WING S.NO.144, H.NO.1, CTS NO.113, MAHAVIR NAGAR, DHANYKARWADI, KANDIVALI WEST MUMBAI 400067</td>
+				          <td>CARPET 672.000 SQ FT</td>
+				          <td>2 BHK</td>
+				          <td>UF</td>
+				          <td>FRENCH WINDOWS, SMART SECURITY, NATURAL LIGHT</td>
+				          <td>POOL, GYM, CLUBHOUSE, RAIN WATER HARVESTING, SERVICE LIFT, SMART SECURITY, MAINTENANCE STAFF, WATER STORAGE</td>
+				          <td>8,400,000</td>
+				          <td>8,300,000</td>
+				          <td>7,500,000</td>
+				          <td>29/07/2019 11:30 AM</td>
+				          <td>10,700,000</td>
+				          <td>1</td>
+				          <td>PHYSICAL</td>
+				          <td><i class="green"></i></td>
+				          <td>KAP Price</td>
+				        </tr>
+				        <tr>
+				          <td class="hard_left">SBINIRFAAAAA</td>
+				          <td class="next_center">Flat</td>
+				          <td class="next_left">ANSH STUDIO</td>
+				          <td>No</td>
+				          <td>SARB MUMBAI</td>
+				          <td>01/07/2011</td>
+				          <td>FLAT NO.209, 2ND FLOOR, RAJ RESIDENCY II CHS LTD. C WING S.NO.144, H.NO.1, CTS NO.113, MAHAVIR NAGAR, DHANYKARWADI, KANDIVALI WEST MUMBAI 400067</td>
+				          <td>CARPET 672.000 SQ FT</td>
+				          <td>2 BHK</td>
+				          <td>UF</td>
+				          <td>FRENCH WINDOWS, SMART SECURITY, NATURAL LIGHT</td>
+				          <td>POOL, GYM, CLUBHOUSE, RAIN WATER HARVESTING, SERVICE LIFT, SMART SECURITY, MAINTENANCE STAFF, WATER STORAGE</td>
+				          <td>8,400,000</td>
+				          <td>8,300,000</td>
+				          <td>7,500,000</td>
+				          <td>29/07/2019 11:30 AM</td>
+				          <td>10,700,000</td>
+				          <td>1</td>
+				          <td>PHYSICAL</td>
+				          <td><i class="green"></i></td>
+				          <td>KAP Price</td>
+				        </tr>
+				        <tr>
+				          <td class="hard_left">SBINIRFAAAAA</td>
+				          <td class="next_center">Flat</td>
+				          <td class="next_left">ANSH STUDIO</td>
+				          <td>No</td>
+				          <td>SARB MUMBAI</td>
+				          <td>01/07/2011</td>
+				          <td>FLAT NO.209, 2ND FLOOR, RAJ RESIDENCY II CHS LTD. C WING S.NO.144, H.NO.1, CTS NO.113, MAHAVIR NAGAR, DHANYKARWADI, KANDIVALI WEST MUMBAI 400067</td>
+				          <td>CARPET 672.000 SQ FT</td>
+				          <td>2 BHK</td>
+				          <td>UF</td>
+				          <td>FRENCH WINDOWS, SMART SECURITY, NATURAL LIGHT</td>
+				          <td>POOL, GYM, CLUBHOUSE, RAIN WATER HARVESTING, SERVICE LIFT, SMART SECURITY, MAINTENANCE STAFF, WATER STORAGE</td>
+				          <td>8,400,000</td>
+				          <td>8,300,000</td>
+				          <td>7,500,000</td>
+				          <td>29/07/2019 11:30 AM</td>
+				          <td>10,700,000</td>
+				          <td>1</td>
+				          <td>PHYSICAL</td>
+				          <td><i class="green"></i></td>
+				          <td>KAP Price</td>
+				        </tr>
+			        </tbody>
+			    </table>
+			  </div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<div id="advancefilter" class="modal fade advance-filter">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">Filter</h4>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+        	<div class="row">
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>Immovable Property Type</label>
+	        			<select class="form-control">
+	        				<option>Residential</option>
+	        			</select>
+        			</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>Property Subtype</label>
+	        			<select class="form-control">
+	        				<option>Flat</option>
+	        			</select>
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>Flat no.</label>
+	        			<input type="text" class="form-control" name="">
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>Building name</label>
+	        			<input type="text" class="form-control" name="">
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>Street name</label>
+	        			<input type="text" class="form-control" name="">
+	        		</div>
+        		</div>
+
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>Landmark</label>
+	        			<input type="text" class="form-control" name="">
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>Locality</label>
+	        			<input type="text" class="form-control" name="">
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>City</label>
+	        			<select class="form-control">
+	        				<option>Mumbai</option>
+	        			</select>
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label class="required">District</label>
+	        			<select class="form-control">
+	        				<option>Mumbai</option>
+	        			</select>
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label class="required">State</label>
+	        			<select class="form-control">
+	        				<option>Maharashtra</option>
+	        			</select>
+	        		</div>
+        		</div>
+
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label class="required">Pincode</label>
+	        			<input type="text" class="form-control" name="">
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>Migrating Branch</label>
+	        			<select class="form-control">
+	        				<option>Maharashtra</option>
+	        			</select>
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>Recovery Branch</label>
+	        			<select class="form-control">
+	        				<option>Maharashtra</option>
+	        			</select>
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>Recall date</label>
+	        			<input type="text" class="form-control" name="">
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>NPA Date</label>
+	        			<input type="text" class="form-control" name="">
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>Area</label>
+	        			<input type="text" class="form-control" name="">
+	        		</div>
+        		</div>
+        	</div>
+        	<div class="row">
+        		<div class="col-md-8">
+        			<div class="price-slider">
+        				<input id="Slider5" type="slider" name="area" value="0;80000" />
+        			</div>
+        		</div>
+        	</div>
+        	<div class="row">
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>Possession status</label>
+	        			<select class="form-control">
+	        				<option>Maharashtra</option>
+	        			</select>
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>Configuration</label>
+	        			<select class="form-control">
+	        				<option>2 BHK</option>
+	        			</select>
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>Name of Resolution Agent</label>
+	        			<select class="form-control">
+	        				<option>MA ASSOCIATES</option>
+	        			</select>
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>Auction Start Date and End Date</label>
+	        			<input type="text" class="form-control" name="">
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>KAP Price</label>
+	        			<input type="text" class="form-control" name="">
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>Case officer name</label>
+	        			<select class="form-control">
+	        				<option>S C SARASWAT</option>
+	        			</select>
+	        		</div>
+        		</div>
+        		<div class="col-md-4">
+        			<div class="form-group">
+	        			<label>Case lead officer name</label>
+	        			<select class="form-control">
+	        				<option>MR. S S BORDE</option>
+	        			</select>
+	        		</div>
+        		</div>
+        		<div class="col-md-24">
+        			<div class="form-group">
+        				<input type="checkbox" id="referred-nclt" name="">
+	        			<label for="referred-nclt">Referred to NCLT</label>
+	        		</div>
+        		</div>
+        		<div class="col-md-24">
+        			<div class="form-group">
+        				<input type="checkbox" id="sold-properties" name="">
+	        			<label for="sold-properties">Sold Properties</label>
+	        		</div>
+        		</div>
+        	</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+      	<input type="submit" value="Search" class="addbtn btn btn-primary btn-lg">
+      	<input type="submit" value="Reset" class="addbtn btn btn-secondary btn-lg">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-slider.js"></script>
+
+<script type="text/javascript" src="js/slider/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="js/slider/jshashtable-2.1_src.js"></script>
+<script type="text/javascript" src="js/slider/jquery.numberformatter-1.2.3.js"></script>
+<script type="text/javascript" src="js/slider/tmpl.js"></script>
+<script type="text/javascript" src="js/slider/jquery.dependClass-0.1.js"></script>
+<script type="text/javascript" src="js/slider/draggable-0.1.js"></script>
+<script type="text/javascript" src="js/slider/jquery.slider.js"></script>
+
+
+<script type="text/javascript" charset="utf-8">
+  jQuery("#Slider5").slider({
+    from: 0,
+    to: 80000,
+    scale: [0, 150000, 250000, 350000, 500000, 80000],
+    step: 1000
+  });
+</script>
+</body>
+</html>
