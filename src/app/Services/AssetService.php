@@ -639,4 +639,18 @@ class AssetService
         }
         return $AssetData;
     }
+
+    public function uploadFile($data){
+        try{
+            $imageName = time() . '.' . $data['files']->getClientOriginalExtension();
+            $data['files']->move(
+                base_path() . '/public/images/demo/', $imageName
+            );
+            return $imageName;
+        }catch (\Exception $exception) {
+            throw $exception;
+        }
+    }
+
+
 }

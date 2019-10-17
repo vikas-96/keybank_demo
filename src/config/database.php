@@ -95,11 +95,11 @@ return [
             'driver'   => 'mongodb',
             'host'     => env('DB_HOST', 'localhost'),
             'port'     =>  env('DB_PORT', 27017),
-            'database' => env('DB_DATABASE', 'aid'),
+            'database' => env('DB_DATABASE', 'aid_demo'),
             'username' => '',
             'password' => '',
             'options'  => [
-                'database' =>   env('DB_DATABASE', 'aid')// sets the authentication database required by mongo 3
+                'database' =>   env('DB_DATABASE', 'aid_demo')// sets the authentication database required by mongo 3
             ]
         ],
 

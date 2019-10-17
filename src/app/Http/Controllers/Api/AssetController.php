@@ -455,4 +455,15 @@ class AssetController extends Controller
             return $property;
         }
     }
+
+    public function uploadFile(Request $request)
+    {
+        try {
+            $assets = $this->AssetService->uploadFile($request->all());
+            return response()->json(['image' => $assets,'message'=>"image upload successfully"], 200);
+        } catch (\Exception $ex) {
+            return response()->json(['message' => $ex->getMessage()], 500);
+        }
+    }
+
 }

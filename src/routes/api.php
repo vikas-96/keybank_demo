@@ -76,6 +76,10 @@ $api->version('v1', function ($api) {
             $api->get('auctionreports', 'ReportsController@getAuctionDataReports')->name('auction-report');
             $api->get('reservepricereports', 'ReportsController@getReservePriceReports')->name('reserveprice-report');
             $api->get('areaspreadreports', 'ReportsController@getAreaSpreadReports')->name('area-report');
+
+            //demo react 
+            $api->post('uploadfile', 'AssetController@uploadFile');
+            $api->resource('usersdemo', 'UsersDemoController');
         });
     });
 });
