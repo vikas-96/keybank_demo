@@ -642,11 +642,18 @@ class AssetService
 
     public function uploadFile($data){
         try{
-            $imageName = time() . '.' . $data['files']->getClientOriginalExtension();
-            $data['files']->move(
-                base_path() . '/public/images/demo/', $imageName
-            );
-            return $imageName;
+
+            $path = 'images/';
+
+            $file = $data['files'];
+            
+            $path = $file->store($path);
+            
+            if(!is_null($path)){
+                $path = 'storage/images/'.$file->hashName();
+                return $path;
+            }
+            return response()->json(['message' => 'Unable to upload file'], 500);
         }catch (\Exception $exception) {
             throw $exception;
         }
