@@ -29,8 +29,8 @@ class UsersDemoRequest extends FormRequest
             'email'         => 'nullable|email',
             'gender'       => 'nullable',
             'hob'       => 'nullable',
-            'statesvalue'     => 'nullable',
-            'cityvalue'     => 'nullable',
+            'states'     => 'nullable',
+            'cities'     => 'nullable',
             'npa_date'     => 'nullable',
             'file'     => 'nullable'
         ];

@@ -14,7 +14,6 @@ class UsersDemoService
     public function index($request)
     {
         $userdata = UsersDemo::with('state','city')->get();
-        // dd($userdata->toArray());
         return $userdata;
     }
 
@@ -33,7 +32,7 @@ class UsersDemoService
 
     public function show($id)
     {
-        $borrowerdata = Borrower::find($id);
+        $borrowerdata = UsersDemo::find($id);
         if(!empty($borrowerdata)){
             return $borrowerdata;
         }

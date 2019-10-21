@@ -25,6 +25,10 @@ class UsersDemoResource extends JsonResource
             'city' => $this->city['city'],
             'npa_date' => $this->npa_date,
             'file' => $this->file,
+            'statesdata' => [
+                'value' => $this->state['id'],
+                'label' => $this->state['state']
+            ]
         ];
     }
 }

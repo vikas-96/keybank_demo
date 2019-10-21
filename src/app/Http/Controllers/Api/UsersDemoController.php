@@ -68,7 +68,12 @@ class UsersDemoController extends Controller
      */
     public function show($id)
     {
-        //
+        try{
+            $userdata = $this->UsersDemoService->show($id);
+            return response()->json(new UsersDemoResource($userdata), 200);
+        }catch (\Exception $ex) {
+            return response()->json(['message' => $ex->getMessage()], 404);
+        }
     }
 
     /**

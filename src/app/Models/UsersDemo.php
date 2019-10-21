@@ -17,7 +17,7 @@ class UsersDemo extends Moloquent
      */
     public function state()
     {
-        return $this->hasOne('App\Models\LocationMaster', '_id', 'statesvalue')->select('state');
+        return $this->hasOne('App\Models\LocationMaster', '_id', 'states')->select('state');
     }
     /**
      * [city description]
@@ -25,6 +25,6 @@ class UsersDemo extends Moloquent
      */
     public function city()
     {
-        return $this->hasOne('App\Models\LocationMaster', '_id', 'cityvalue')->where('type', 'city');
+        return $this->hasOne('App\Models\LocationMaster', '_id', 'cities')->select('_id','city')->where('type', 'city');
     }
 }
