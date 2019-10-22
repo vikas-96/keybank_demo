@@ -94,9 +94,20 @@ class UsersDemoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UsersDemoRequest $request, $id)
     {
-        //
+        $validatedUser = $request->validated();
+
+        try {
+            $user = $this->UsersDemoService->update($validatedUser, $id);
+
+            return response()->json(['message' => 'User Updated'], 200);
+            // return response()->json(new userResource($user), 200);
+        } catch(ModelNotFoundException $ex) {
+            return response()->json(['message' => 'Unable to find requested User!'], 404);
+        } catch (\Exception $ex) {
+            return response()->json(['message' => $ex->getMessage()], 500);
+        }
     }
 
     /**

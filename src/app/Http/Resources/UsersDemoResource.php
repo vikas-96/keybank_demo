@@ -28,6 +28,10 @@ class UsersDemoResource extends JsonResource
             'statesdata' => [
                 'value' => $this->state['id'],
                 'label' => $this->state['state']
+            ],
+            'citiesdata' => [
+                'value' => $this->city['id'],
+                'label' => $this->city['city']
             ]
         ];
     }

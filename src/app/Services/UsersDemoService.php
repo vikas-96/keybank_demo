@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Services;
 
 use App\Models\UsersDemo;
@@ -39,12 +38,12 @@ class UsersDemoService
         throw new \Exception("Record not found");
     }
 
-    public function update($borrowerData, $borrowerId)
+    public function update($UserData, $UserId)
     {
-        $currentBorrower = Borrower::findOrFail($borrowerId);
-        $currentBorrower->update($borrowerData);
+        $currentUser = UsersDemo::findOrFail($UserId);
+        $currentUser->update($UserData);
 
-        return $currentBorrower;
+        return $currentUser;
     }
 
     public function destroy($id)
