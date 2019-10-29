@@ -80,6 +80,7 @@ $api->version('v1', function ($api) {
             //demo react 
             $api->post('uploadfile', 'AssetController@uploadFile');
             $api->resource('usersdemo', 'UsersDemoController');
+            $api->resource('borrowerdemo', 'BorrowerDemoController');
         });
     });
 });
