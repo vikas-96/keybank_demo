@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Services\BorrowerDemoService;
 use App\Http\Requests\BorrowerDemorequest;
-use App\Http\Resources\BorrowerDemoResource;
+use App\Http\Resources\BorrowersDemoResource;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class BorrowerDemoController extends Controller
@@ -26,7 +26,7 @@ class BorrowerDemoController extends Controller
     public function index(Request $request)
     {
         $borrower = $this->BorrowerDemoService->index($request);
-        return BorrowerDemoResource::collection($borrower);
+        return BorrowersDemoResource::collection($borrower);
     }
 
     /**
@@ -69,7 +69,7 @@ class BorrowerDemoController extends Controller
     {
         try{
             $borrowerdata = $this->BorrowerDemoService->show($id);
-            return response()->json(new BorrowerResource($borrowerdata), 200);
+            return response()->json(new BorrowersDemoResource($borrowerdata), 200);
         }catch (\Exception $ex) {
             return response()->json(['message' => $ex->getMessage()], 404);
         }
