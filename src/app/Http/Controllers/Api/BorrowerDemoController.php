@@ -93,7 +93,7 @@ class BorrowerDemoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(BorrowerRequest $request, $id)
+    public function update(BorrowerDemorequest $request, $id)
     {
         $validatedData = $request->validated();
 
@@ -117,15 +117,15 @@ class BorrowerDemoController extends Controller
      */
     public function destroy($id)
     {
-        // try {
-        //     $deleteUser = $this->BorrowerDemoService->destroy($id);
+        try {
+            $deleteUser = $this->BorrowerDemoService->destroy($id);
 
-        //     return response()->json(['message' => 'Borrower has been deleted successfully!'], 200);
-        // } catch(ModelNotFoundException $ex) {
-        //     return response()->json(['message' => 'Unable to find requested Borrower!'], 404);
-        // } catch (\Exception $ex) {
-        //     return response()->json(['message' => $ex->getMessage()], 500);
-        // }
+            return response()->json(['message' => 'Borrower has been deleted successfully!'], 200);
+        } catch(ModelNotFoundException $ex) {
+            return response()->json(['message' => 'Unable to find requested Borrower!'], 404);
+        } catch (\Exception $ex) {
+            return response()->json(['message' => $ex->getMessage()], 500);
+        }
     }
 
 }

@@ -75,7 +75,7 @@ class BorrowerDemoService
 
     public function update($borrowerData, $borrowerId)
     {
-        $currentBorrower = Borrower::findOrFail($borrowerId);
+        $currentBorrower = BorrowerDemo::findOrFail($borrowerId);
         $currentBorrower->update($borrowerData);
 
         return $currentBorrower;
@@ -83,10 +83,10 @@ class BorrowerDemoService
 
     public function destroy($id)
     {
-        // $borrower = Borrower::findOrFail($id);
+        $borrower = BorrowerDemo::findOrFail($id);
 
-        // if ($borrower->delete()) {
-        //     return $borrower;
-        // }
+        if ($borrower->delete()) {
+            return $borrower;
+        }
     }
 }
